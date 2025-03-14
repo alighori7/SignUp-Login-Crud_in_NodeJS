@@ -11,7 +11,13 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use((req, res, next) => {
-  const openRoutes = ["/api/auth/login", "/api/auth/signup"];
+  const openRoutes = [
+    "/api/auth/login",
+    "/api/auth/signup",
+    "/api/auth/forgot-password",
+    "/api/auth/verify-otp",
+    "/api/auth/reset-password",
+  ];
   if (openRoutes.includes(req.path)) {
     return next();
   }
