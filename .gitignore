@@ -8,3 +8,6 @@ node_modules/
 
 # Ignore pkg directory
 .pkg/
+
+# Environment variables
+.env
