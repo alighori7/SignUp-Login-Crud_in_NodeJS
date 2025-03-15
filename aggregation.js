@@ -20,7 +20,7 @@ db.products.aggregate([
         totalItems: { $size: "$relatedPizzas" } // Count of related pizzas
       }
     },
-    // Project (select) only the fields you want in the output
+    // Project output fields
     {
       $project: {
         title: 1,
